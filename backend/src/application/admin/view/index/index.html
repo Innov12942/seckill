@@ -1,0 +1,27 @@
+<fieldset class="layui-elem-field layui-field-title site-title">
+<legend><a name="default">商品信息</a></legend>
+</fieldset>
+<table class="layui-table">
+    <thead>
+        <tr>
+            <th>商品号</th>
+            <th>商品名</th>
+            <th>价格</th>
+            <th>秒杀时间</th>   
+            <th>总数量</th>   
+        </tr>
+    </thead>
+    <tbody>
+        {volist name="goodsinfo" id="vo"}
+        <tr>
+
+            <td>{$vo.id}</td>
+            <td>{$vo.name}</td>
+            <td>{$vo.price}</td>
+            <td>{$vo.expire|date="Y-m-d H:i:s",###}</td>
+            <td>{$vo.totalnum}</td>
+        </tr>
+        
+        {/volist}
+    </tbody>
+</table>
