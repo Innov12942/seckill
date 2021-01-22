@@ -32,15 +32,6 @@ vi /private/etc/apache2/extra/httpd-vhosts.conf
 </VirtualHost>
 ```
 
-自定义前端路径
-
-更改host指向本机
-```
-vi /etc/hosts
-在文件末尾加上
-127.0.0.1 fronthost
-```
-
 加载rewrite模块
 ```
 LoadModule rewrite_module libexec/apache2/mod_rewrite.so
@@ -122,7 +113,7 @@ go get github.com/go-redis/redis/v8
 go build src/*.go
 ```
 
-运行Go服务后登陆前端页面
+**运行Go服务后登陆前端页面**
 ```
 http://localhost:8080/#/login
 ```
